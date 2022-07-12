@@ -17,15 +17,15 @@ afterEach(() => {
 });
 
 describe('tests for common.flex.phone-numbers.list-phone-numbers', () => {
-    it('list-phone-numbers_returnError_flexTokenmissing', async () => {
+    it('list-phone-numbers_returnError_flexTokenMissing', async () => {
         const resp = await executeHandler(functionHandler, handlerContext, {});
         expect(resp.statusCode).toBe(403);
 
     });
-    it('list-phone-numbers_returnError_flexTokenSent', async () => {
+    it('list-phone-numbers_success_flexTokenSent', async () => {
         const resp = await executeHandler(functionHandler, handlerContext, { Token: "flex-token" });
         expect(resp.statusCode).toBe(200);
-        process.env.TWILIO_API_LIMIT_BREACHED = false;
+        expect(resp.body.success).toBe(true);
     });
 
 });
