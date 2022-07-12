@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "test": "echo 'Tests to come'; exit 1",
+    "test": "jest",
     "start": "twilio serverless:start",
     "deploy": "twilio serverless:deploy --override-existing-project --env \".env.$TWILIO_PROFILE\" --no-assets --runtime node14",
     "install-serverless-plugin": "twilio plugins:install @twilio-labs/plugin-serverless@v2",
@@ -24,6 +24,9 @@
     "@types/lodash": "4.14.182",
     "axios": "0.27.2",
     "copyfiles": "2.4.1",
+    "dotenv": "^16.0.1",
+    "fs-extra": "^10.1.0",
+    "jest": "^28.1.2",
     "twilio-cli": "3.4.2",
     "twilio-run": "3.4.2",
     "typescript": "^3.9.4"

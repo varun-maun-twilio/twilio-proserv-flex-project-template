@@ -1,7 +1,7 @@
 const { isObject } = require("lodash");
 const retryHandler = (require(Runtime.getFunctions()['functions/common/twilio-wrappers/retry-handler'].path)).retryHandler;
 
- 
+
 /**
  * @param {object} parameters the parameters for the function
  * @param {string} parameters.scriptName the name of the top level lambda function 
